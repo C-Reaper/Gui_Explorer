@@ -19,7 +19,7 @@ Explorer ex;
 void Setup(AlxWindow* w){
 	ex = Explorer_New("..",Rect_New(
 		(Vec2){ 10.0f,10.0f },
-		(Vec2){ 200.0f,GetHeight() - 20 }
+		(Vec2){ 500.0f,GetHeight() - 20 }
 	));
 }
 void Update(AlxWindow* w){
