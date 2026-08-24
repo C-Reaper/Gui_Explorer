@@ -27,6 +27,8 @@ void Update(AlxWindow* w){
 	if(Stroke(ALX_KEY_S).DOWN) ex.r.d.x += 100.0f * w->ElapsedTime;
 	if(Stroke(ALX_KEY_A).DOWN) ex.r.p.x -= 100.0f * w->ElapsedTime;
 	if(Stroke(ALX_KEY_D).DOWN) ex.r.p.x += 100.0f * w->ElapsedTime;
+	
+	Explorer_Update(&ex,w->Strokes,GetMouse());
 
 	if(Stroke(ALX_MOUSE_L).PRESSED){
 		Explorer_File* ef = Explorer_Select(&ex,w->Strokes,GetMouse());
@@ -34,8 +36,6 @@ void Update(AlxWindow* w){
 			printf("%s\n",ef->path);
 		}
 	}
-	
-	Explorer_Update(&ex,w->Strokes,GetMouse());
 
 	Clear(BLACK);
 
